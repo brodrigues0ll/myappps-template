@@ -1,0 +1,11 @@
+services:
+  mongo:
+    container_name: ${PROJECT_NAME}-DB
+    image: mongo
+    restart: no
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: ${PROJECT_NAME}
